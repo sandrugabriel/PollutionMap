@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PollutionMap.Panels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,27 @@ namespace PollutionMap
         public Form1()
         {
             InitializeComponent();
+
+            this.Controls.Add(new pnlLogare(this));
         }
+
+        public void removepnl(string pnl)
+        {
+
+            Control control = null;
+
+            foreach (Control c in this.Controls)
+            {
+                if (c.Name.Equals(pnl))
+                {
+                    control = c;
+                }
+
+            }
+
+            this.Controls.Remove(control);
+
+        }
+
     }
 }

@@ -61,6 +61,16 @@ namespace PollutionMap.Models
             return dateTime;
         }
 
+        public void setDateTime(DateTime dateTime)
+        {
+            this.dateTime = dateTime;
+        }
+
+        public string toSave()
+        {
+
+            return id.ToString() + "#" + name + "#" + password + "#" + email + "#" + dateTime;
+        }
 
     }
 }
