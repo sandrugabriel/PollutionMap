@@ -139,7 +139,8 @@ namespace PollutionMap.Panels
         private void btnContNou_Click(object sender, EventArgs e)
         {
 
-
+            this.form.removepnl("pnlLogare");
+            this.form.Controls.Add(new pnlContNou(form));
 
         }
 

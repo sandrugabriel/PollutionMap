@@ -62,6 +62,9 @@
     <Compile Include="Models\Harta.cs" />
     <Compile Include="Models\Masurare.cs" />
     <Compile Include="Models\Utilizator.cs" />
+    <Compile Include="Panels\pnlContNou.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Panels\pnlLogare.cs">
       <SubType>Component</SubType>
     </Compile>
