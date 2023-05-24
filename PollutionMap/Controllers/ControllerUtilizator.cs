@@ -55,9 +55,48 @@ namespace PollutionMap.Controllers
 
             }
 
+            return false;
+        
+        }
+
+        public bool verificationPassword(string password)
+        {
+
+            if (password.Count() <= 8)
+            {
+                return false;
+            }
+
+            int semn = 0;
+            int semn1 = 0;
+            for (int i = 0; i < password.Count(); i++)
+            {
+                if ((int)password[i] >= 65 && (int)password[i] <= 90)
+                {
+
+                    semn = 1;
+
+                }
+
+                if ((int)password[i] >= 48 && (int)password[i] <= 57)
+                {
+                    semn1 = 1;
+
+                }
+
+
+            }
+
+            if (semn == 1 && semn1 == 1)
+            {
+                return true;
+            }
+
 
             return false;
+
         }
+
 
         public string namebyid(int id)
         {
