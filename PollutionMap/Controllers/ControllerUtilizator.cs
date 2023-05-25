@@ -223,7 +223,19 @@ namespace PollutionMap.Controllers
         }
 
 
+        public Utilizator utilizatorbyId(int id)
+        {
 
+            for(int i=0;i<utilizatorii.Count;i++)
+            {
+                if (utilizatorii[i].getId() == id)
+                {
+                    return utilizatorii[i];
+                }
+            }
+
+            return null;
+        }
 
     }
 }
