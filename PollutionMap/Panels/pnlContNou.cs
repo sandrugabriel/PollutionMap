@@ -1,4 +1,5 @@
 ﻿using PollutionMap.Controllers;
+using PollutionMap.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -104,9 +105,7 @@ namespace PollutionMap.Panels
             // txtParola
             this.txtParola.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtParola.Location = new System.Drawing.Point(174, 423);
-            this.txtParola.Name = "txtParola";
             this.txtParola.Size = new System.Drawing.Size(388, 38);
-            this.txtParola.TabIndex = 4;
              
             // btnSanvare
             this.btnSanvare.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -131,9 +130,7 @@ namespace PollutionMap.Panels
             // txtParolaConf
             this.txtParolaConf.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtParolaConf.Location = new System.Drawing.Point(173, 556);
-            this.txtParolaConf.Name = "txtParolaConf";
             this.txtParolaConf.Size = new System.Drawing.Size(388, 38);
-            this.txtParolaConf.TabIndex = 8;
             
             // lblparolaConf
             this.lblparolaConf.AutoSize = true;
@@ -190,8 +187,8 @@ namespace PollutionMap.Panels
                     erori.Add("Password is invalid");
 
                 }
-
-                if (txtParola.Text.Equals(txtParolaConf.Text))
+                else
+                    if (txtParola.Text != txtParolaConf.Text)
                 {
                     erori.Add("Password does not match");
                 }
@@ -229,6 +226,10 @@ namespace PollutionMap.Panels
 
                 controllerUtilizator.load();
 
+                Utilizator utilizator = new Utilizator(textul);
+
+                this.form.removepnl("pnlContNou");
+                this.form.Controls.Add(new pnlVizualizare(form, utilizator));
             }
 
 

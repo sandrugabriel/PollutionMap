@@ -1,4 +1,5 @@
 ﻿using PollutionMap.Controllers;
+using PollutionMap.Models;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -124,6 +125,8 @@ namespace PollutionMap.Panels
                 controllerUtilizator.setDateTime(id,DateTime.Now);
                 controllerUtilizator.update();
                 this.form.removepnl("pnlLogare");
+                Utilizator utilizator = controllerUtilizator.utilizatorbyId(id);
+                this.form.Controls.Add(new pnlVizualizare(form,utilizator));
             }
             else
             {

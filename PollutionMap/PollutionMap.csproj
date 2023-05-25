@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ControllerMasuri.cs" />
     <Compile Include="Controllers\ControllerUtilizator.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -59,13 +60,25 @@
     <Compile Include="Mockups\MockupLogin.Designer.cs">
       <DependentUpon>MockupLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mockups\MockupVizualizare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mockups\MockupVizualizare.Designer.cs">
+      <DependentUpon>MockupVizualizare.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Harta.cs" />
     <Compile Include="Models\Masurare.cs" />
     <Compile Include="Models\Utilizator.cs" />
+    <Compile Include="Panels\pnlAddMasurare.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Panels\pnlContNou.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Panels\pnlLogare.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Panels\pnlVizualizare.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
@@ -75,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mockups\MockupLogin.resx">
       <DependentUpon>MockupLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mockups\MockupVizualizare.resx">
+      <DependentUpon>MockupVizualizare.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
